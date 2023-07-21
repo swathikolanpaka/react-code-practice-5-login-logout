@@ -1,7 +1,7 @@
 import {Component} from 'react'
-import Login from './Login/index'
-import Logout from './Logout/index'
-import Message from './Message/index'
+import Login from '../Login'
+import Logout from '../Logout'
+import Message from '../Message'
 
 class Home extends Component {
   state = {isClicked: true}
@@ -22,7 +22,7 @@ class Home extends Component {
         {isClicked ? (
           <Logout text={text} btnText={btnText} click={btnClicked} />
         ) : (
-          <Login text={text} btnText={btnText} />
+          <Login text={text} btnText={btnText} click={this.btnClicked} />
         )}
       </div>
     )
