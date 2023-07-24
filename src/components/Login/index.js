@@ -1,10 +1,13 @@
-// Write your code here
-import Message from '../Message'
-
-import Home from '../Home'
+// Write y
 
 const Login = props => {
-  const {click, btnText} = props
-  return <button onClick={click}>{btnText}</button>
+  const {btnText, click} = props
+
+  const onChange = () => {
+    click()
+  }
+
+  return <button onClick={onChange}>{btnText}</button>
 }
+
 export default Login

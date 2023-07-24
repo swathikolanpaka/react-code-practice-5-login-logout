@@ -1,1 +1,18 @@
 /* Write your CSS here */
+.bg-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.small-container {
+  color: #ffffff;
+  background-image: linear-gradient(to bottom, #2b2c49, #b5b9ff);
+  height: 50vh;
+  width: 50vh;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+  font-family: Robot;
+  font-size: 10px;
+}

@@ -1,12 +1,13 @@
-// Write your code here
-
-import Message from '../Message/index'
-
-import Home from '../Home'
+// Write your co
 
 const Logout = props => {
   const {btnText, click} = props
-  return <button onClick={click}>{btnText}</button>
+
+  const onChange = () => {
+    click()
+  }
+
+  return <button onClick={onChange}>{btnText}</button>
 }
 
 export default Logout

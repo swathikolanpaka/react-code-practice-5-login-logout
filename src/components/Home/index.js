@@ -6,6 +6,8 @@ import Logout from '../Logout'
 
 import Message from '../Message'
 
+import './index.css'
+
 class Home extends Component {
   state = {isClicked: true}
 
@@ -22,11 +24,14 @@ class Home extends Component {
 
     return (
       <div className="bg-container">
-        {isClicked ? (
-          <Logout text={text} btnText={btnText} click={btnClicked} />
-        ) : (
-          <Login text={text} btnText={btnText} click={this.btnClicked} />
-        )}
+        <div className="small-container">
+          {isClicked ? <Message text={text} /> : <Message text={text} />}
+          {isClicked ? (
+            <Login btnText={btnText} click={this.btnClicked} />
+          ) : (
+            <Logout btnText={btnText} click={this.btnClicked} />
+          )}
+        </div>
       </div>
     )
   }
